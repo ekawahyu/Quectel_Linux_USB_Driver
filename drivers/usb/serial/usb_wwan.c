@@ -617,7 +617,7 @@ bail_out_error:
 }
 EXPORT_SYMBOL_GPL(usb_wwan_port_probe);
 
-int usb_wwan_port_remove(struct usb_serial_port *port)
+void usb_wwan_port_remove(struct usb_serial_port *port)
 {
 	int i;
 	struct usb_wwan_port_private *portdata;
@@ -638,7 +638,7 @@ int usb_wwan_port_remove(struct usb_serial_port *port)
 
 	kfree(portdata);
 
-	return 0;
+	//return 0;
 }
 EXPORT_SYMBOL(usb_wwan_port_remove);
 
